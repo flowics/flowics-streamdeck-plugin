@@ -1,0 +1,40 @@
+{
+  "Actions": [
+    {
+      "UUID": "com.flowics.graphics.overlay.toggle",
+      "Name": "Toggle",
+      "Tooltip": "Toggles an overlay state",
+      "PropertyInspectorPath": "propertyInspector/overlay.html",
+      "Icon": "images/http_action",
+      "States": [
+        {
+          "Image": "images/http_key"
+        }
+      ]
+    }
+  ],
+  "SDKVersion": 2,
+  "Author": "Flowics",
+  "CodePath": "index.html",
+  "Name": "Flowics",
+  "Description": "Controls Flowics Graphics",
+  "Icon": "images/plugin",
+  "Category": "Flowics",
+  "CategoryIcon": "images/category",
+  "URL": "https://github.com/flowics/streamdeck-graphics-control",
+  "Version": "0.1.0",
+  "OS": [
+    {
+        "Platform": "mac",
+        "MinimumVersion" : "10.11"
+    },
+    {
+        "Platform": "windows",
+        "MinimumVersion" : "10"
+    }
+  ],
+  "Software":
+    {
+        "MinimumVersion" : "4.2"
+    }
+}
