@@ -1,9 +1,43 @@
 $SD.on("connected", (jsonObj) => connected(jsonObj));
 
 function connected(jsn) {
-    $SD.on('gg.datagram.web-requests.http.keyDown', (jsonObj) => sendHttp(jsonObj));
-    $SD.on('gg.datagram.web-requests.websocket.keyDown', (jsonObj) => sendWebSocket(jsonObj));
-};
+  $SD.on("com.flowics.graphics.overlay.toggle.keyDown", (jsonObj) =>
+    sendToggle(jsonObj)
+  );
+}
+
+/**
+ * @param {{
+ *   context: string,
+ *   payload: {
+ *     settings: {
+ *       token?: string,
+ *       overlayId?: string,
+ *     }
+ *   },
+ * }} data
+ */
+function sendToggle(data) {
+  const url = `https://api.flowics.com/graphics/${data.payload.settings.token}/control/overlays/transition`;
+  const body = JSON.stringify([
+    {
+      id: data.payload.settings.overlayId,
+      transition: "toggle",
+    },
+  ]);
+  const newData = {
+    ...data,
+    payload: {
+      settings: {
+        url,
+        method: "PUT",
+        contentType: "application/json",
+        body,
+      },
+    },
+  };
+  sendHttp(newData);
+}
 
 /**
  * @param {{

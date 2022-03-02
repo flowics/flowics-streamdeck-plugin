@@ -1,21 +1,13 @@
 {
-  "Name": "Web Requests",
-  "Description": "Send arbitrary web requests via HTTP or WebSocket.",
-  "Category": "Web Requests",
-  "gg.datagram.web-requests.http": {
-    "Name": "HTTP Request",
-    "Tooltip": "Send an HTTP request."
-  },
-  "gg.datagram.web-requests.websocket": {
-    "Name": "WebSocket Message",
-    "Tooltip": "Send a WebSocket message."
+  "Name": "Flowics",
+  "Description": "Controls Flowics Graphics",
+  "Category": "Flowics",
+  "com.flowics.graphics.overlay.toggle": {
+    "Name": "Toggle",
+    "Tooltip": "Toggles an overlay state."
   },
   "Localization": {
-    "URL": "URL",
-    "Method": "Method",
-    "ContentType": "Content Type",
-    "Headers": "Headers",
-    "Message": "Message",
-    "Body": "Body"
+    "Token": "Token",
+    "OverlayId": "Overlay ID"
   }
 }
