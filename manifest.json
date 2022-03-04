@@ -11,6 +11,42 @@
           "Image": "images/http_key"
         }
       ]
+    },
+    {
+      "UUID": "com.flowics.graphics.overlay.takeallout",
+      "Name": "Take All Out",
+      "Tooltip": "Takes all overlays out",
+      "PropertyInspectorPath": "propertyInspector/takeallout.html",
+      "Icon": "images/http_action",
+      "States": [
+        {
+          "Image": "images/http_key"
+        }
+      ]
+    },
+    {
+      "UUID": "com.flowics.graphics.overlay.takein",
+      "Name": "Take In",
+      "Tooltip": "Takes overlay in",
+      "PropertyInspectorPath": "propertyInspector/overlay.html",
+      "Icon": "images/http_action",
+      "States": [
+        {
+          "Image": "images/http_key"
+        }
+      ]
+    },
+    {
+      "UUID": "com.flowics.graphics.overlay.takeout",
+      "Name": "Take Out",
+      "Tooltip": "Takes overlay out",
+      "PropertyInspectorPath": "propertyInspector/overlay.html",
+      "Icon": "images/http_action",
+      "States": [
+        {
+          "Image": "images/http_key"
+        }
+      ]
     }
   ],
   "SDKVersion": 2,
