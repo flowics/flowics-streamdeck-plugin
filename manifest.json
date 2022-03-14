@@ -2,49 +2,49 @@
   "Actions": [
     {
       "UUID": "com.flowics.graphics.overlay.toggle",
-      "Name": "Toggle",
-      "Tooltip": "Toggles an overlay state",
+      "Name": "Toggle Overlay",
+      "Tooltip": "Toggles an Overlay IN and OUT",
       "PropertyInspectorPath": "propertyInspector/overlay.html",
-      "Icon": "images/http_action",
+      "Icon": "images/toggle-overlay_action-image",
       "States": [
         {
-          "Image": "images/http_key"
+          "Image": "images/toggle-overlay_key-image"
         }
       ]
     },
     {
       "UUID": "com.flowics.graphics.overlay.takeallout",
       "Name": "Take All Out",
-      "Tooltip": "Takes all overlays out",
+      "Tooltip": "Takes all Overlays OUT",
       "PropertyInspectorPath": "propertyInspector/takeallout.html",
-      "Icon": "images/http_action",
+      "Icon": "images/take-all-out_action-image",
       "States": [
         {
-          "Image": "images/http_key"
+          "Image": "images/take-all-out_key-image"
         }
       ]
     },
     {
       "UUID": "com.flowics.graphics.overlay.takein",
-      "Name": "Take In",
-      "Tooltip": "Takes overlay in",
+      "Name": "Overlay IN",
+      "Tooltip": "Takes an Overlay IN",
       "PropertyInspectorPath": "propertyInspector/overlay.html",
-      "Icon": "images/http_action",
+      "Icon": "images/overlay-in_action-image",
       "States": [
         {
-          "Image": "images/http_key"
+          "Image": "images/overlay-in_key-image"
         }
       ]
     },
     {
       "UUID": "com.flowics.graphics.overlay.takeout",
-      "Name": "Take Out",
-      "Tooltip": "Takes overlay out",
+      "Name": "Overlay OUT",
+      "Tooltip": "Takes an Overlay OUT",
       "PropertyInspectorPath": "propertyInspector/overlay.html",
-      "Icon": "images/http_action",
+      "Icon": "images/overlay-out_action-image",
       "States": [
         {
-          "Image": "images/http_key"
+          "Image": "images/overlay-out_key-image"
         }
       ]
     }
@@ -53,24 +53,23 @@
   "Author": "Flowics",
   "CodePath": "index.html",
   "Name": "Flowics",
-  "Description": "Controls Flowics Graphics",
+  "Description": "Controls for Flowics Graphics Packages",
   "Icon": "images/plugin",
   "Category": "Flowics",
-  "CategoryIcon": "images/category",
+  "CategoryIcon": "images/category-icon",
   "URL": "https://github.com/flowics/streamdeck-graphics-control",
   "Version": "0.1.0",
   "OS": [
     {
-        "Platform": "mac",
-        "MinimumVersion" : "10.11"
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
     },
     {
-        "Platform": "windows",
-        "MinimumVersion" : "10"
+      "Platform": "windows",
+      "MinimumVersion": "10"
     }
   ],
-  "Software":
-    {
-        "MinimumVersion" : "4.2"
-    }
+  "Software": {
+    "MinimumVersion": "4.2"
+  }
 }
