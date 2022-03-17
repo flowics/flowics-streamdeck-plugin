@@ -54,7 +54,7 @@
   "CodePath": "index.html",
   "Name": "Flowics",
   "Description": "Controls for Flowics Graphics Packages",
-  "Icon": "images/plugin",
+  "Icon": "images/category-icon",
   "Category": "Flowics",
   "CategoryIcon": "images/category-icon",
   "URL": "https://github.com/flowics/streamdeck-graphics-control",
