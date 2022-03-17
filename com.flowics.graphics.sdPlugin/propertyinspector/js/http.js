@@ -1,77 +1,26 @@
-$SD.on("connected", (jsonObj) => connected(jsonObj));
+/*
+  MIT License
 
-function connected(jsn) {
-  $SD.on("com.flowics.graphics.overlay.toggle.keyDown", (jsonObj) =>
-    sendOverlayAction("toggle", jsonObj)
-  );
-  $SD.on("com.flowics.graphics.overlay.takein.keyDown", (jsonObj) =>
-    sendOverlayAction("in", jsonObj)
-  );
-  $SD.on("com.flowics.graphics.overlay.takeout.keyDown", (jsonObj) =>
-    sendOverlayAction("out", jsonObj)
-  );
-  $SD.on("com.flowics.graphics.overlay.takeallout.keyDown", (jsonObj) =>
-    sendTakeAllOut(jsonObj)
-  );
-}
+  Copyright (c) 2021 Adrian Mullings
 
-/**
- * @param {'toggle' | 'in' | 'out'} overlayAction
- * @param {{
- *   context: string,
- *   payload: {
- *     settings: {
- *       token?: string,
- *       overlayId?: string,
- *     }
- *   },
- * }} data
- */
-function sendOverlayAction(overlayAction, data) {
-  const url = `https://api.flowics.com/graphics/${data.payload.settings.token}/control/overlays/transition`;
-  const body = JSON.stringify([
-    {
-      id: data.payload.settings.overlayId,
-      transition: overlayAction,
-    },
-  ]);
-  const newData = {
-    ...data,
-    payload: {
-      settings: {
-        url,
-        method: "PUT",
-        contentType: "application/json",
-        body,
-      },
-    },
-  };
-  sendHttp(newData);
-}
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
-/**
- * @param {{
- *   context: string,
- *   payload: {
- *     settings: {
- *       token?: string,
- *     }
- *   },
- * }} data
- */
-function sendTakeAllOut(data) {
-  const url = `https://api.flowics.com/graphics/${data.payload.settings.token}/control/overlays/take-all-out`;
-  const newData = {
-    ...data,
-    payload: {
-      settings: {
-        url,
-        method: "PUT",
-      },
-    },
-  };
-  sendHttp(newData);
-}
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+*/
 
 /**
  * @param {{
