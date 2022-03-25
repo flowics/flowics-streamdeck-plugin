@@ -51,13 +51,12 @@
   ],
   "SDKVersion": 2,
   "Author": "Flowics",
+  "Name": "Flowics Graphics",
+  "Description": "Control Flowics Graphics outputs from your Stream Deck. Show and hide individual Overlays, hide them all at once, switch between Scenes, and many other actions coming. Adding professional graphics and animations to your livestream was never this easy!",
   "CodePath": "index.html",
-  "Name": "Flowics",
-  "Description": "Controls for Flowics Graphics Packages",
   "Icon": "images/plugin-icon",
   "Category": "Flowics",
   "CategoryIcon": "images/category-icon",
-  "URL": "https://github.com/flowics/streamdeck-graphics-control",
   "Version": "0.1.0",
   "OS": [
     {
