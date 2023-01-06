@@ -47,6 +47,18 @@
           "Image": "images/overlay-out_key-image"
         }
       ]
+    },
+    {
+      "UUID": "com.flowics.graphics.providers.googlesheet.sync",
+      "Name": "Sync Google Sheet Provider",
+      "Tooltip": "Sync Google Sheet Provider",
+      "PropertyInspectorPath": "propertyInspector/provider.html",
+      "Icon": "images/overlay-out_action-image",
+      "States": [
+        {
+          "Image": "images/overlay-out_key-image"
+        }
+      ]
     }
   ],
   "SDKVersion": 2,

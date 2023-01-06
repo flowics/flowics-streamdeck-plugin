@@ -13,7 +13,12 @@ function connected(jsn) {
   $SD.on("com.flowics.graphics.overlay.takeallout.keyDown", (jsonObj) =>
     sendTakeAllOut(jsonObj)
   );
+  $SD.on("com.flowics.graphics.providers.googlesheet.sync.keyDown", (jsonObj) =>
+    syncGoogleSheet(jsonObj)
+  );
 }
+
+// TODO Agregar debounce a las acciones de StreamDeck
 
 /**
  * @param {'toggle' | 'in' | 'out'} overlayAction
@@ -61,6 +66,32 @@ function sendOverlayAction(overlayAction, data) {
  */
 function sendTakeAllOut(data) {
   const url = `https://api.flowics.com/graphics/${data.payload.settings.token}/control/overlays/take-all-out`;
+  const newData = {
+    ...data,
+    payload: {
+      settings: {
+        url,
+        method: "PUT",
+      },
+    },
+  };
+  sendHttp(newData);
+}
+
+/**
+ * @param {{
+ *   context: string,
+ *   payload: {
+ *     settings: {
+ *       token?: string,
+ *       providerId?: string,
+ *     }
+ *   },
+ * }} data
+ */
+function syncGoogleSheet(data) {
+  const url = `https://api.flowics.com/graphics/${data.payload.settings.token}/control/global-data-providers/id:${data.payload.settings.providerId}/actions/sync`;
+
   const newData = {
     ...data,
     payload: {
